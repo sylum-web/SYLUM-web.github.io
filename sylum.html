@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SYLUM — Productos ecológicos de bamboo</title>
+  <style>
+    :root{
+      --bg:#f6fbf6;
+      --card:#ffffff;
+      --accent:#3b8a3b;
+      --muted:#6b6b6b;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef6ee);color:#222;}
+    header{
+      background:linear-gradient(90deg, rgba(59,138,59,0.95), rgba(90,170,90,0.95));
+      color:white;
+      padding:32px 20px;
+      text-align:center;
+    }
+    .container{max-width:1000px;margin:24px auto;padding:0 16px;}
+    h1{margin:0;font-size:2rem;letter-spacing:0.6px;}
+    p.lead{margin:12px 0 0;opacity:0.95;}
+    nav{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+    nav a{color:white;text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.08)}
+    section{margin:28px 0;padding:18px;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(25,25,25,0.06)}
+    .flex{display:flex;gap:18px;align-items:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .product{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.04);text-align:center;background:linear-gradient(180deg,#fff,#fbfffb)}
+    .product img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;cursor:pointer;border:none;font-weight:600}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    footer{margin:18px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+    @media(max-width:600px){ header{padding:22px} h1{font-size:1.5rem} .flex{flex-direction:column;align-items:flex-start} .product img{height:140px} }
+    .logo{display:flex;align-items:center;gap:10px;justify-content:center}
+    .logo .mark{width:46px;height:46px;border-radius:50%;background:white;color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .contact-form{display:grid;gap:8px}
+    .input, textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6;width:100%;box-sizing:border-box}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="mark">S</div>
+      <div>
+        <h1>SYLUM</h1>
+        <div style="font-size:0.95rem;opacity:0.95">Productos ecológicos hechos a base de bamboo</div>
+      </div>
+    </div>
+
+    <nav aria-label="menú principal" style="margin-top:18px">
+      <a href="#acerca">Acerca de</a>
+      <a href="#objetivo">Nuestro objetivo</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="acerca">
+      <div class="flex">
+        <div style="flex:1">
+          <h2>Acerca de SYLUM</h2>
+          <p class="lead">SYLUM nace con la misión de ofrecer alternativas sostenibles y prácticas para la vida diaria. Nuestros productos están diseñados pensando en la durabilidad, la estética y el impacto ambiental mínimo: 100% basados en bamboo renovable y con empaques reducidos.</p>
+        </div>
+        <div style="width:220px">
+          <img src="https://images.unsplash.com/photo-eco-natural-bamboo-toothbrushes-flat-lay-on-rustic-background-24uUMavLb3s?auto=format&fit=crop&w=600&q=80"
+               alt="Bamboo products" style="width:100%;border-radius:8px;object-fit:cover;height:140px">
+        </div>
+      </div>
+    </section>
+
+    <section id="objetivo">
+      <h2>Nuestro objetivo</h2>
+      <p>Promover hábitos de consumo responsables sustituyendo artículos de uso cotidiano de plástico por opciones biodegradables y reusables de bamboo. A la vez apoyamos prácticas de abastecimiento sostenible y comunidades locales que cultivan y procesan bamboo de manera ética.</p>
+      <ul>
+        <li>Reducir residuos plásticos de un solo uso.</li>
+        <li>Materiales 100% naturales y renovables.</li>
+        <li>Transparencia en la cadena de suministro.</li>
+      </ul>
+    </section>
+
+    <section id="productos">
+      <h2>Productos principales</h2>
+      <div class="grid" aria-live="polite">
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-eco-natural-bamboo-toothbrushes-flat-lay-on-rustic-background-24uUMavLb3s?auto=format&fit=crop&w=800&q=80"
+               alt="Cepillo dental de bamboo">
+          <h3>Cepillo dental de bamboo</h3>
+          <p style="color:var(--muted)">Cerdas suaves, mango biodegradable, presentación por unidades o packs.</p>
+          <button class="btn" onclick="noComprar('Cepillo dental de bamboo')">Comprar</button>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-a-wooden-spoon-fork-and-knife-rest-on-a-bamboo-cutting-board-2qk6Y3VFHzk?auto=format&fit=crop&w=800&q=80"
+               alt="Juego de cubiertos de bamboo">
+          <h3>Set de cubiertos reutilizables</h3>
+          <p style="color:var(--muted)">Cuchara, tenedor, cuchillo y palillos en estuche de bamboo — ideal para llevar.</p>
+          <button class="btn" onclick="noComprar('Set de cubiertos reutilizables')">Comprar</button>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-reusable-eco-friendly-glass-water-bottle-with-bamboo-straw-on-cloth-shopping-bag-with-green-leaves-sustainable-lifestyle-concept-B5cRrZuWJ24?auto=format&fit=crop&w=800&q=80"
+               alt="Popotes de bamboo">
+          <h3>Popotes (pajillas) de bamboo</h3>
+          <p style="color:var(--muted)">Con cepillo limpiador y funda; lavables y compostables.</p>
+          <button class="btn" onclick="noComprar('Popotes de bamboo')">Comprar</button>
+        </article>
+
+        <article class="product">
+          <img src="https://images.unsplash.com/photo-a-bamboo-table-topped-with-a-potted-plant-and-wooden-utensils-q4QE2I8GHaw?auto=format&fit=crop&w=800&q=80"
+               alt="Set de viaje de bamboo">
+          <h3>Set de viaje</h3>
+          <p style="color:var(--muted)">Viaja sin plástico: cepillo, cubiertos y popote en estuche compacto.</p>
+          <button class="btn" onclick="noComprar('Set de viaje')">Comprar</button>
+        </article>
+      </div>
+      <p style="margin-top:12px;color:var(--muted)"><small>Nota: Nuestros productos se muestran con fines informativos. Si pulsa "Comprar", aparecerá la disponibilidad actual.</small></p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <div class="grid">
+        <div>
+          <p>¿Tienes preguntas, pedidos especiales o quieres trabajar con nosotros? Escríbenos:</p>
+          <p><strong>Email:</strong> hola@sylum.eco</p>
+          <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
+          <p><strong>Dirección:</strong> Av. Sustentable 100, Ciudad Verde</p>
+        </div>
+        <div>
+          <form class="contact-form" onsubmit="enviarContacto(event)">
+            <input class="input" type="text" id="name" placeholder="Tu nombre" required>
+            <input class="input" type="email" id="email" placeholder="Tu correo" required>
+            <textarea id="message" class="input" placeholder="Mensaje" rows="4" required></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn">Enviar</button>
+              <button type="button" class="btn ghost" onclick="limpiarForm()">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> SYLUM — Hecho con bamboo y cariño. <br>
+      <small>Imágenes de ejemplo obtenidas de bancos públicos y sitios de imágenes libres (Unsplash) para demostración.</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function noComprar(nombre){
+      alert(nombre + "\nNo se pueden comprar actualmente.");
+    }
+    function enviarContacto(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){ alert('Por favor completa todos los campos.'); return; }
+      alert('Gracias, ' + name + '!\nTu mensaje ha sido enviado (simulado).');
+      limpiarForm();
+    }
+    function limpiarForm(){
+      document.getElementById('name').value='';
+      document.getElementById('email').value='';
+      document.getElementById('message').value='';
+    }
+  </script>
+
+</body>
+</html>
